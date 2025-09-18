@@ -22,8 +22,8 @@ safety_settings = {
     generative_models.HarmCategory.HARM_CATEGORY_HARASSMENT: generative_models.HarmBlockThreshold.BLOCK_NONE,
 }
 import google.generativeai as genai
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
-model = genai.GenerativeModel('gemini-pro',generation_config={'temperature':0.3})
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+model = genai.GenerativeModel('gemini-1.5-flash',generation_config={'temperature':0.3})
 prompt=[
         {'role':'user',
         'parts': [system_prompt],
