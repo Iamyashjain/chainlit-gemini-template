@@ -5,8 +5,12 @@ from model import stream_gemini_response
 
 async def on_chat_start():
     text = """
-Hey there! This is my first message
+👋 Hello! I’m your Nagar Mitra, here to help you register civic complaints with ease.  
+
+Whether it’s a pothole, a broken streetlight, or garbage that needs clearing just tell me, and I’ll make sure your concern gets logged.  
+Ready? Let’s get started! 🚀
 """
+
     await cl.Message(content=text).send()
     cl.user_session.set(
         "message_history",
